@@ -8,8 +8,8 @@ public class Book extends Product{
     public Book() {
     }
 
-    public Book(String name, double price, String author) {
-        super(name, price);
+    public Book(String name, double price, int stock , String author) {
+        super(name, price, stock);
         this.author = author;
     }
 
@@ -23,5 +23,8 @@ public class Book extends Product{
 
     public double getDiscount(){
         return getPrice() * 0.4;
+    }
+    public void purchase(){ //this method will reduce the stck by 1 implying that a purchase just got made
+        setStock(getStock()-1);
     }
 }

@@ -7,22 +7,28 @@ public class Main {
 
 
         // --- Book test ---
-        Book book = new Book("The witcher" , 400 , "Andrzej Sapkowski");
+        Book book = new Book("The witcher" , 400 , 3 , "Andrzej Sapkowski");
         System.out.println("Book: " + book.getName());
         System.out.println("Author: " + book.getAuthor());
-        System.out.println("Price: " + book.getPrice());
-        System.out.println("Discount: " + book.getDiscount());
-        System.out.println("Final price: " + (book.getPrice() - book.getDiscount()));
+        System.out.println("Stock: " + book.getStock());
+        System.out.println("Price: $" + book.getPrice());
+        System.out.println("Discount: $" + book.getDiscount());
+        System.out.println("Final price: $" + (book.getPrice() - book.getDiscount()));
+        book.purchase();
+        System.out.println("Stock after purchase: " + book.getStock());
 
         System.out.println();
 
         // --- Movie test ---
-        Movie movie = new Movie("The Godfather" , 20 , "Francis Ford Coppola");
+        Movie movie = new Movie("The Godfather" , 20 , 20 , "Francis Ford Coppola");
         System.out.println("\nMovie: " + movie.getName());
         System.out.println("Director: " + movie.getDirector());
-        System.out.println("Price: " + movie.getPrice());
-        System.out.println("Discount: " + movie.getDiscount());
-        System.out.println("Final price: " + (movie.getPrice() - movie.getDiscount()));
+        System.out.println("Stock: " + movie.getStock());
+        System.out.println("Price: $" + movie.getPrice() );
+        System.out.println("Discount: $" + movie.getDiscount() );
+        System.out.println("Final price: $" + (movie.getPrice() - movie.getDiscount()) );
+        movie.purchase();
+        System.out.println("Stock after purchase: " + movie.getStock());
 
         System.out.println();
 
